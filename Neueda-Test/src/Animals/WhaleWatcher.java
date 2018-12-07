@@ -10,6 +10,8 @@ public class WhaleWatcher {
 		findAtlantic(whaleWatcher);
 		findFastest(whaleWatcher);
 		averageLength(whaleWatcher);
+		findHeaviest(whaleWatcher);
+		
 		
 		
 	}
@@ -62,12 +64,34 @@ public class WhaleWatcher {
 	
 	public static void averageLength(ArrayList<Whale> whaleWatcher)
 	{
+		//adds all lenghts into sum them divides by the arrays length in print statment to get answer
 		double sum=0;
 		for(int i=0;i<whaleWatcher.size();i++)
 		{
 			sum+=whaleWatcher.get(i).getLength();
 		}
 		System.out.println("Average Length of the Whales are :"+(sum/whaleWatcher.size()));
+	}
+	public static void findHeaviest(ArrayList<Whale> whaleWatcher)
+	{
+		//loop to determain one or more heaviest whale(s) put them in a new array and print them
+				ArrayList<Whale> heaviestWhales=new ArrayList<Whale>();
+				int weight=whaleWatcher.get(0).getWeight();
+				for(int i=0;i<whaleWatcher.size();i++)
+				{
+					
+					 if(whaleWatcher.get(i).getWeight()==weight)
+					{
+						heaviestWhales.add(whaleWatcher.get(i));
+					}
+					 else if(whaleWatcher.get(i).getWeight()>weight)
+						{	heaviestWhales.clear();
+						heaviestWhales.add(whaleWatcher.get(i));
+						}
+				}
+				
+				for(int i=0;i<heaviestWhales.size();i++) {
+				System.out.println("Heaviest Whale(s): "+heaviestWhales.get(i).getName());}
 	}
 
 }
