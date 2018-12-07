@@ -43,6 +43,16 @@ public class Whale extends Animal{
 	public void setLength(int length) {
 		this.length = length;
 	}
-	
+	//returns all data on a whale in a string
+	public String toString()
+	{
+		String output=("Name: "+getName()
+		+"\nMain Ocean: "+getMainOcean()
+		+"\nWeight(Tonnes): "+getWeight()
+		+"\nMax Speed: "+getMaxSpeed()
+		+"\nLength: "+getLength());
+		
+		return output;
+	}
 	
 }
