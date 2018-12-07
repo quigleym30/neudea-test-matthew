@@ -5,10 +5,11 @@ public class Whale extends Animal{
 	private String mainOcean;
 	private int weight,maxSpeed,length;
 	
-
+	//default constructor
 	public Whale() {
 		super();
 	}
+	//full arguments constructor 
 	public Whale(String name, String mainOcean, int weight, int maxSpeed, int length) {
 		super(name);
 		this.mainOcean = mainOcean;
@@ -16,6 +17,8 @@ public class Whale extends Animal{
 		this.maxSpeed = maxSpeed;
 		this.length = length;
 	}
+	
+	//getter and setters
 	public String getMainOcean() {
 		return mainOcean;
 	}
