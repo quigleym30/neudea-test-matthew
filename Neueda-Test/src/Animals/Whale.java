@@ -18,7 +18,7 @@ public class Whale extends Animal{
 		this.length = length;
 	}
 	
-	//getter and setters
+	//getters and setters
 	public String getMainOcean() {
 		return mainOcean;
 	}
