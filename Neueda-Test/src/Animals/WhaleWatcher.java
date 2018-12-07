@@ -22,8 +22,25 @@ public class WhaleWatcher {
 		for(int i=0;i<whaleWatcher.size();i++)
 		{
 			if(whaleWatcher.get(i).getMainOcean()=="Atlantic")
-				System.out.println(whaleWatcher.get(i).getName());
+				System.out.println(whaleWatcher.get(i).getName()+" Swims in the Atlantic");
 		}
+		//loop to determain one or more fastest whale(s) put them in a new array and print them
+		ArrayList<Whale> fastestWhales=new ArrayList<Whale>();
+		int speed=whaleWatcher.get(0).getMaxSpeed();
+		for(int i=0;i<whaleWatcher.size();i++)
+		{
+			if(whaleWatcher.get(i).getMaxSpeed()>speed)
+			{	fastestWhales.clear();
+			fastestWhales.add(whaleWatcher.get(i));
+			}
+			else if(whaleWatcher.get(i).getMaxSpeed()==speed)
+			{
+				fastestWhales.add(whaleWatcher.get(i));
+			}
+		}
+		for(int i=0;i<fastestWhales.size();i++)
+		System.out.println("Fastest Whale(s): "+fastestWhales.get(i).getName());
+		
 	}
 
 }
