@@ -17,6 +17,13 @@ public class WhaleWatcher {
 		System.out.println((whaleWatcher.get(1)).toString());
 		System.out.println((whaleWatcher.get(2)).toString());
 		System.out.println((whaleWatcher.get(3)).toString());
+		
+		//loops through all arrayList items and prints name if mainOcean is Atlantic
+		for(int i=0;i<whaleWatcher.size();i++)
+		{
+			if(whaleWatcher.get(i).getMainOcean()=="Atlantic")
+				System.out.println(whaleWatcher.get(i).getName());
+		}
 	}
 
 }
